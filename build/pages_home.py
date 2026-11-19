@@ -56,7 +56,6 @@ def home():
 <section class="hero">
   <div class="hero__media">
     <picture>
-      <source media="(max-width:700px)" srcset="{src('aOHYeayl')}">
       {img('b8B1MNaU', 'Luchs mit grünen Augen – Symbol für geschärfte Sinne', eager=True)}
     </picture>
   </div>

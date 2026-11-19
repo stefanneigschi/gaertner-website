@@ -29,7 +29,7 @@ def hoerakustik():
         ("/hoerakustik/tinnitus/", "RdRQ3BVL", "Tinnitus", "Tinnitus"),
         ("/hoerakustik/zubehoer-und-reinigung/", "68nS3pT5", "Zubehör & Reinigung", "Reinigung von Hörgeräten"),
     ]
-    svc_html = "".join(f'''<a class="tile tile--shade span-4 spot rv" style="--d:{i * .08:.2f}s;min-height:380px" href="{h}">
+    svc_html = "".join(f'''<a class="tile tile--shade span-4 spot rv" style="--d:{i * .08:.2f}s" href="{h}">
   <div class="tile__bg">{img(p, a)}</div><h3 class="h-md" style="display:flex;justify-content:space-between;align-items:end;gap:20px">{escape(t)}<span class="btn btn-ghost btn-sm" aria-hidden="true" style="width:42px;padding:0">{icon('arrow')}</span></h3></a>'''
                        for i, (h, p, t, a) in enumerate(svc))
 

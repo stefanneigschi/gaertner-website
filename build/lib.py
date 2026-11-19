@@ -367,21 +367,30 @@ def crumbs_html(crumbs):
     return f'<nav aria-label="Brotkrümelnavigation"><ol class="crumbs">{"".join(items)}</ol></nav>'
 
 
+# Bildausschnitt (x %) je Header-Foto, damit Gesichter vollständig im Rahmen liegen
+FOCAL = {"8ctIQgZ5": 62, "9SwxnaT0": 56, "WAY9RGSS": 73, "jKjdFFJr": 52, "EeQ7WmX3": 61, "Nt3znHfI": 64,
+         "Dhm8N1JE": 62, "bn8iBcmT": 56, "bHR2vwHT": 62, "R6g1rVkC": 95, "GGz5GwAB": 62, "BjOcVIsR": 72,
+         "QqXw6DJF": 62, "JE0b3EEE": 56, "HSLRCqqP": 50, "aOHYeayl": 85}
+
+
 def page_hero(eyebrow, h1, lead_html, image=None, alt="", crumbs=None, buttons=None, plain=False):
-    media = f'<div class="phero__media">{img(image, alt, eager=True)}</div>' if image else ""
+    media = ""
+    if image:
+        fx = FOCAL.get(image, 50)
+        media = f'<div class="phero__media rv" style="--d:.15s">{img(image, alt, eager=True, extra=f'style="object-position:{fx}% 50%"')}</div>'
     cls = "phero" + (" phero--plain" if plain or not image else "")
     b = f'<div class="btn-row rv" style="--d:.3s">{"".join(buttons)}</div>' if buttons else ""
     c = crumbs_html(crumbs) if crumbs else ""
     return f'''
 <section class="{cls}">
-  {media}
-  <div class="container">
+  <div class="container phero__grid">
     <div class="phero__inner">
       <div class="rv">{c}</div>
       <h1 class="h-xl rv" style="--d:.12s">{h1}</h1>
       <div class="lead rv" style="--d:.2s">{lead_html}</div>
       {b}
     </div>
+    {media}
   </div>
 </section>'''
 
