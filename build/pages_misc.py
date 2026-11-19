@@ -15,7 +15,6 @@ def kontakt():
   <div class="container">
     <div class="split split--top">
       <div class="rv">
-        <span class="eyebrow">Terminanfrage</span>
         <h2 class="h-lg" id="t" style="margin:20px 0 22px">Schreiben Sie <em>uns</em>.</h2>
         <p class="lead">Wählen Sie das passende Fachgeschäft und nennen Sie uns Ihr Anliegen. Wir melden uns mit einem Terminvorschlag – in der Regel innerhalb eines Werktags.</p>
         <div class="frame frame--wide" style="margin-top:36px">{img('Nt3znHfI', 'Verkaufsraum von Gaertner Optik')}</div>

@@ -27,8 +27,7 @@ def sub_page(cfg):
     main_img = f'<div class="frame frame--square">{img(cfg["img"], cfg["img_alt"])}</div>' if cfg.get("img") else ""
     sec = ""
     if cfg.get("h2"):
-        text = f'''<span class="eyebrow">{escape(cfg.get("h2_eyebrow", cfg["eyebrow"]))}</span>
-<h2 class="h-lg" style="margin:20px 0 26px">{cfg["h2"]}</h2>
+        text = f'''<h2 class="h-lg" style="margin:20px 0 26px">{cfg["h2"]}</h2>
 <div class="prose">{cfg["h2_text"]}</div>'''
         sec = f'<section class="section"><div class="container">{split(text, main_img, rev=cfg.get("rev", False))}</div></section>'
     extra_top = cfg.get("extra_top", "")
@@ -61,7 +60,6 @@ def optik():
     spans = ["span-5", "span-7", "span-4", "span-4", "span-4", "span-6", "span-6"]
     t = "".join(f'''<a class="tile tile--shade {spans[i]} spot rv" style="--d:{(i % 3) * .08:.2f}s" href="{h}">
   <div class="tile__bg">{img(p, a)}</div>
-  <span class="kicker">Optik</span>
   <h3 class="h-md" style="display:flex;justify-content:space-between;align-items:end;gap:20px">{escape(n)}<span class="btn btn-ghost btn-sm" aria-hidden="true" style="flex-shrink:0;width:42px;padding:0">{icon('arrow')}</span></h3>
 </a>''' for i, (p, n, h, a) in enumerate(tiles))
 
@@ -72,7 +70,7 @@ def optik():
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Sortiment</span><h2 class="h-lg">Für jede <em>Sehsituation</em> die passende Lösung.</h2></div>
+      <div class="rv"><h2 class="h-lg">Für jede <em>Sehsituation</em> die passende Lösung.</h2></div>
     </div>
     <div class="bento">{t}</div>
   </div>
@@ -81,7 +79,6 @@ def optik():
   <div class="container">
     <div class="split">
       <div class="rv">
-        <span class="eyebrow">Werkstatt</span>
         <h2 class="h-lg" style="margin:20px 0 26px">Ihr Weg zur <em>perfekten</em> Brille</h2>
         <div class="prose"><p>Eine optimal an Ihre Dioptrien angepasste Brille garantiert ein bestmögliches Seherlebnis in jeder Situation. In unserer hauseigenen Werkstätte wird Ihre Brille nach erfolgtem Sehtest in fachmännischer Handarbeit eingeschliffen. Wir bieten Ihnen auch einen Express-Service, damit Sie auf raschestem Weg zu Ihrer perfekt angepassten Brille kommen!</p></div>
       </div>
@@ -107,7 +104,6 @@ def kontaktlinsen():
   <div class="container">
     <div class="split split--top">
       <div class="rv">
-        <span class="eyebrow">Nachbestellung</span>
         <h2 class="h-lg" id="nb" style="margin:20px 0 22px">Kontaktlinsen <em>nachbestellen</em></h2>
         <p class="lead">Füllen Sie das Formular aus – wir melden uns zur Bestätigung. Lieferung per Post (5 € Versand) oder Abholung im Geschäft.</p>
         <div style="margin-top:34px">

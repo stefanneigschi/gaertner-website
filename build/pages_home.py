@@ -32,7 +32,7 @@ def reviews_html():
 <section class="section section--line" aria-labelledby="bewertungen">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Bewertungen</span><h2 class="h-lg" id="bewertungen">Was unsere <em>Kundinnen und Kunden</em> sagen.</h2></div>
+      <div class="rv"><h2 class="h-lg" id="bewertungen">Was unsere <em>Kundinnen und Kunden</em> sagen.</h2></div>
       <p class="lead rv" style="--d:.1s">Auszüge aus Google-Bewertungen für Gaertner in Innsbruck.</p>
     </div>
   </div>
@@ -63,7 +63,6 @@ def home():
   <div class="hero__grid" aria-hidden="true"></div>
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="container hero__content">
-    <div class="rv"><span class="eyebrow">Optik &amp; Hörakustik · Innsbruck</span></div>
     <h1 class="hero__h1 rv" style="--d:.08s">Gaertner – Optiker &amp; Hörakustiker mit Herz in Innsbruck</h1>
     <p class="h-display hero__claim rv" style="--d:.16s">Ihre Sinne<br>in <em class="grad">Bestform.</em></p>
     <p class="hero__sub rv" style="--d:.24s">Präzision für <em>Augen</em> &amp; <em>Ohren</em>.</p>
@@ -101,14 +100,13 @@ def home():
 <section class="section section--line" aria-labelledby="leistungen">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Leistungen</span><h2 class="h-lg" id="leistungen">Für <em>Auge</em> und <em>Ohr</em> – alles aus einer Hand.</h2></div>
+      <div class="rv"><h2 class="h-lg" id="leistungen">Für <em>Auge</em> und <em>Ohr</em> – alles aus einer Hand.</h2></div>
       <p class="lead rv" style="--d:.1s">Zwei Fachbereiche, ein Anspruch: präzise Anpassung, geprüfte Qualität und Beratung, die sich nach Ihnen richtet.</p>
     </div>
     <div class="bento">
       <article class="tile tile--xl tile--shade span-7 spot rv">
         <div class="tile__bg">{img('9aJKUOZ7', 'Mann mit Brille')}</div>
         {img('QDyy9G7F', '', 'tile__icon', extra='aria-hidden="true"')}
-        <span class="kicker">Optik</span>
         <h2 class="h-md">Brillen vom Optiker</h2>
         <p>In unserem Optikerfachgeschäft dreht sich alles um Ihr bestes Sehen – und um Ihren persönlichen Stil. Von der Alltagsbrille über Sport- und Sonnenbrillen bis hin zu Kontaktlinsen finden Sie bei uns eine große Auswahl hochwertiger Produkte. Modische Fassungen bekannter Marken, präzise angepasste Brillengläser und verschiedene Beschichtungen für mehr Komfort und Langlebigkeit sorgen dafür, dass Sie nicht nur gut sehen, sondern sich auch rundum wohlfühlen.</p>
         <div class="chips"><a class="chip" href="/optik/">Alles zur Optik {icon('arrow')}</a>{optik_chips}</div>
@@ -116,26 +114,22 @@ def home():
       <article class="tile tile--xl tile--shade span-5 spot rv" style="--d:.1s">
         <div class="tile__bg">{img('9WuOHd5l', 'Hörgeräte mit Ladestation')}</div>
         {img('iDq0d80Y', '', 'tile__icon', extra='aria-hidden="true"')}
-        <span class="kicker">Hörakustik</span>
         <h2 class="h-md">Alles rund ums Hören</h2>
         <p>In unserem Hörgerätefachgeschäft in Innsbruck dreht sich alles um Ihr bestes Hören – und um Ihre Lebensqualität. Von modernen Hörsystemen für den Alltag über innovative Lösungen für anspruchsvolle Hörsituationen bis hin zu individuellem Gehörschutz finden Sie bei uns eine große Auswahl hochwertiger Produkte.</p>
         <div class="chips"><a class="chip" href="/hoerakustik/">Alles zur Hörakustik {icon('arrow')}</a>{hoer_chips}</div>
       </article>
       <article class="tile tile--shade span-4 spot rv">
         <div class="tile__bg">{img('8kZmBk5n', 'Auge in Nahaufnahme')}</div>
-        <span class="kicker">Kontaktlinsen</span>
         <h3 class="h-sm">Harte und weiche Linsen, individuell angepasst</h3>
         <div class="chips"><a class="chip" href="/optik/kontaktlinsen/">Kontaktlinsen {icon('arrow')}</a></div>
       </article>
       <article class="tile tile--shade span-4 spot rv" style="--d:.08s">
         <div class="tile__bg">{img('tL1u498S', 'Jäger mit maßgefertigtem Gehörschutz')}</div>
-        <span class="kicker">Gehörschutz</span>
         <h3 class="h-sm">Maßgefertigt in unserem eigenen Labor – made in Tirol</h3>
         <div class="chips"><a class="chip" href="/gehoerschutz/">Gehörschutz {icon('arrow')}</a></div>
       </article>
       <article class="tile tile--shade span-4 spot rv" style="--d:.16s">
         <div class="tile__bg">{img('BuBDRg7l', 'Großmutter liest mit ihren Enkelkindern ein Buch')}</div>
-        <span class="kicker">Hörgeräte</span>
         <p style="color:#fff">Diskrete und leistungsstarke Hörgeräte namhafter Hersteller, präzise Anpassungen durch modernste Messtechnik.</p>
         <div class="chips"><a class="chip" href="/hoerakustik/hoergeraete/">Hörgeräte {icon('arrow')}</a></div>
       </article>
@@ -146,7 +140,6 @@ def home():
 <section class="section section--line" aria-labelledby="labor">
   <div class="container lab">
     <div>
-      <div class="rv"><span class="eyebrow">Handwerk im eigenen Haus</span></div>
       <h2 class="h-lg rv" id="labor" style="--d:.06s;margin:20px 0 28px">Hauseigenes <em>Labor</em> &amp; <em>Werkstatt</em></h2>
       <div class="cards-2" style="grid-template-columns:1fr">
         <article class="card spot rv" style="--d:.1s">
@@ -230,7 +223,6 @@ def about():
   <div class="container">
     <div class="split split--top">
       <div class="rv">
-        <span class="eyebrow">Das Team</span>
         <h2 class="h-lg" style="margin:20px 0 28px">Optiker und Hörakustiker mit <em>Tradition</em> und Innovation</h2>
         <div class="prose"><p>Optik Gaertner verbindet die persönliche Note eines Familienbetriebes mit modernster Technologie. In unseren drei Fachgeschäften in Innsbruck finden Sie spezialisierte Schwerpunkte, die optimal auf Ihre Bedürfnisse zugeschnitten sind. Unsere geprüften Hörakustiker und Augenoptiker nehmen sich Zeit für eine markenunabhängige Beratung, bei der immer Ihre Wünsche im Mittelpunkt stehen. Vom handgefertigten Gehörschutz aus unserem eigenen Otoplastik-Labor bis hin zu individuell angepassten Brillen erhalten Sie bei uns alles aus einer Hand – immer geprüft, immer zuverlässig. Dabei gehen wir weit über die reine Kassenleistung hinaus, um Ihnen ein Höchstmaß an Qualität und Komfort zu bieten.</p></div>
       </div>
@@ -246,7 +238,6 @@ def about():
   <div class="container">
     <div class="split split--rev">
       <div class="rv">
-        <span class="eyebrow">Auge &amp; Ohr</span>
         <h2 class="h-lg" style="margin:20px 0 28px">Persönliche Betreuung für Auge und Ohr in <em>Innsbruck</em></h2>
         <div class="prose"><p>Hören und Sehen bedeutet Lebensqualität – und genau diese machen wir für Sie erlebbar. Unser Meisterhörakustiker Johannes Grimm bringt neben seiner fundierten Ausbildung auch umfassende technische Erfahrung mit. Sein Anspruch: Jeder verdient es, die Welt mit allen Sinnen genießen zu können. Deshalb begleiten wir Sie von der ersten Beratung bis hin zum Service, der ein Hörgeräteleben lang anhält. Bei uns verlassen nur geprüfte Hörgeräte und Otoplastiken das Haus – sei es für Hörgeräte, Schlaf- oder Spritzwasserschutz. Mit Engagement und Leidenschaft sorgen wir dafür, dass Technik nicht verstaubt wirkt, sondern Sie im Alltag aktiv unterstützt. Vertrauen Sie auf Optik Gaertner – Ihren starken Partner für Sehen und Hören in Innsbruck.</p></div>
       </div>
@@ -258,7 +249,7 @@ def about():
 <section class="section section--line" aria-labelledby="auszeichnungen">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Auszeichnungen &amp; Zertifizierungen</span><h2 class="h-lg" id="auszeichnungen">Ausbildung, Verantwortung, <em>Anerkennung</em>.</h2></div>
+      <div class="rv"><h2 class="h-lg" id="auszeichnungen">Ausbildung, Verantwortung, <em>Anerkennung</em>.</h2></div>
       <div class="certs rv" style="--d:.1s">{certs_html()}</div>
     </div>
     <div class="timeline">{"".join(tl)}</div>

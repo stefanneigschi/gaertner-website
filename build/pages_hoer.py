@@ -30,8 +30,7 @@ def hoerakustik():
         ("/hoerakustik/zubehoer-und-reinigung/", "68nS3pT5", "Zubehör & Reinigung", "Reinigung von Hörgeräten"),
     ]
     svc_html = "".join(f'''<a class="tile tile--shade span-4 spot rv" style="--d:{i * .08:.2f}s;min-height:380px" href="{h}">
-  <div class="tile__bg">{img(p, a)}</div><span class="kicker">Leistung</span>
-  <h3 class="h-md" style="display:flex;justify-content:space-between;align-items:end;gap:20px">{escape(t)}<span class="btn btn-ghost btn-sm" aria-hidden="true" style="width:42px;padding:0">{icon('arrow')}</span></h3></a>'''
+  <div class="tile__bg">{img(p, a)}</div><h3 class="h-md" style="display:flex;justify-content:space-between;align-items:end;gap:20px">{escape(t)}<span class="btn btn-ghost btn-sm" aria-hidden="true" style="width:42px;padding:0">{icon('arrow')}</span></h3></a>'''
                        for i, (h, p, t, a) in enumerate(svc))
 
     body = page_hero(
@@ -42,7 +41,7 @@ def hoerakustik():
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Was wir für Sie tun können</span><h2 class="h-lg">Was wir für Sie im Bereich <em>Hörakustik</em> tun können</h2></div>
+      <div class="rv"><h2 class="h-lg">Was wir für Sie im Bereich <em>Hörakustik</em> tun können</h2></div>
     </div>
     {cards([
         ("Top-Service bei Ihrem Hörakustiker in Innsbruck", P("Bei uns genießen Sie einen hervorragenden Service rund um Ihr Hörgerät. Wir bieten Ihnen individuelle Anpassung, Schnellreparaturen innerhalb von 10 Minuten sowie direkte Abrechnung mit Ihrer Krankenkasse! Als freier Akustiker sind wir nicht an eine bestimmte Marke gebunden und können Ihnen Beratung und Wartung für Geräte aller Hersteller bieten. Sie haben einen Akustiker als Vertrauensperson, der stets für Sie da ist und Ihnen individuelle Beratung abgestimmt auf Ihren persönlichen Bedarf bietet!")),
@@ -55,7 +54,7 @@ def hoerakustik():
 
 <section class="section section--line">
   <div class="container">
-    <div class="sec-head"><div class="rv"><span class="eyebrow">Leistungen</span><h2 class="h-lg">Unsere Leistungen für <em>Hörakustik</em></h2></div></div>
+    <div class="sec-head"><div class="rv"><h2 class="h-lg">Unsere Leistungen für <em>Hörakustik</em></h2></div></div>
     <div class="bento">{svc_html}</div>
   </div>
 </section>
@@ -63,7 +62,7 @@ def hoerakustik():
 <section class="section section--line" aria-labelledby="ablauf">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">In acht Schritten</span><h2 class="h-lg" id="ablauf">Ablauf <em>Hörgeräteanpassung</em></h2></div>
+      <div class="rv"><h2 class="h-lg" id="ablauf">Ablauf <em>Hörgeräteanpassung</em></h2></div>
       <p class="lead rv" style="--d:.1s">Von der ersten Höranalyse bis zur kontinuierlichen Betreuung – so begleiten wir Sie.</p>
     </div>
     <div class="steps">{steps}</div>
@@ -72,8 +71,7 @@ def hoerakustik():
 
 <section class="section section--line">
   <div class="container">
-    {split(f"""<span class="eyebrow">Perzentilanalyse</span>
-<h2 class="h-lg" style="margin:20px 0 26px">Individuelle Anpassung mittels <em>Perzentilanalyse</em></h2>
+    {split(f"""<h2 class="h-lg" style="margin:20px 0 26px">Individuelle Anpassung mittels <em>Perzentilanalyse</em></h2>
 <div class="prose"><p><strong>Die Perzentilanalyse basierend auf NAL ermöglicht eine gezielte und damit besonders präzise Einstellung von Hörsystemen.</strong></p>
 <p>Dadurch lässt sich das Sprachverstehen deutlich verbessern. Verschiedene Höreigenschaften des Hörsystems werden dabei genau analysiert, sodass wir bei Gaertner Auditiv gezielt erkennen, welche Töne und Sprachanteile für Sie hörbar sind und optimal unterstützt werden können. Das Ergebnis ist ein individuell angepasstes Hörgerät, das Ihr vorhandenes Hörvermögen bestmöglich nutzt und Ihnen wieder mehr Hörqualität im Alltag schenkt.</p></div>""",
            f'<div class="frame frame--square">{img("eNo8zseQ", "Hörtest")}</div>')}
@@ -84,7 +82,6 @@ def hoerakustik():
   <div class="container">
     <div class="split split--top">
       <div class="rv">
-        <span class="eyebrow">Hörtest</span>
         <h2 class="h-lg" id="ht" style="margin:20px 0 26px">Hörtest bei GAERTNER – Hören <em>neu</em> erleben</h2>
         <div class="prose"><p>Gutes Hören bedeutet Lebensqualität. Ein professioneller Hörtest zeigt nicht nur, wie gut Sie hören, sondern kann auch frühzeitig Hinweise auf Veränderungen des Hörvermögens geben. Viele Menschen bemerken schleichende Hörverluste erst spät – etwa wenn Gespräche anstrengender werden, Stimmen undeutlich wirken oder Hintergrundgeräusche zunehmend stören.</p></div>
         <div class="btn-row" style="margin:30px 0 14px">{btn("Online-Hörtest starten", HOERTEST, "primary", "ext")}</div>
@@ -229,8 +226,7 @@ def zubehoer():
     extra = f'''
 <section class="section section--line">
   <div class="container">
-    {split(f"""<span class="eyebrow">OSKAR TV</span>
-<h2 class="h-lg" style="margin:20px 0 22px">OSKAR TV</h2>
+    {split(f"""<h2 class="h-lg" style="margin:20px 0 22px">OSKAR TV</h2>
 <p class="lead" style="margin-bottom:20px">Der Ton des Fernsehers genau da wo Sie ihn brauchen</p>
 <div class="prose"><p>Dieser unkomplizierte kabellose Lautsprecher mit innovativer Technologie zur Stimmoptimierung lässt sich einfach an den Fernseher anschließen. So können Sie beispielsweise genau die Lautstärke wählen, die Sie möchten, ohne dabei andere Zuschauer im Raum zu beeinträchtigen. Da das Setup so unkompliziert und einfach ist, können Sie sofort loslegen.</p></div>""",
            f'<div class="frame frame--square">{img("oIv863tc", "Oskar TV Lautsprecher")}</div>', rev=True)}
@@ -238,7 +234,7 @@ def zubehoer():
 </section>
 <section class="section section--line" aria-labelledby="reinigung">
   <div class="container">
-    <div class="sec-head"><div class="rv"><span class="eyebrow">Pflege</span><h2 class="h-lg" id="reinigung">Reinigung von <em>Hörgeräten</em></h2></div></div>
+    <div class="sec-head"><div class="rv"><h2 class="h-lg" id="reinigung">Reinigung von <em>Hörgeräten</em></h2></div></div>
     <div class="split split--top">
       <div class="rv">
         <article class="card spot" style="margin-bottom:18px">
@@ -269,7 +265,7 @@ def zubehoer():
 </section>
 <section class="section section--line" aria-labelledby="produkte">
   <div class="container">
-    <div class="sec-head"><div class="rv"><span class="eyebrow">Sortiment</span><h2 class="h-lg" id="produkte">Pflegeprodukte im <em>Geschäft</em></h2></div></div>
+    <div class="sec-head"><div class="rv"><h2 class="h-lg" id="produkte">Pflegeprodukte im <em>Geschäft</em></h2></div></div>
     <div class="rv"><div class="tabs" role="tablist" aria-label="Produktkategorien">{tabs}</div>{panels}</div>
   </div>
 </section>'''
@@ -315,8 +311,7 @@ def gehoerschutz():
         buttons=[btn("Termin vereinbaren", "/kontakt/#termin"), f'<a class="btn btn-ghost" href="tel:+43512570159">{icon("phone")}+43 512 57 01 59</a>']) + f'''
 <section class="section">
   <div class="container">
-    {split(f"""<span class="eyebrow">Made in Tirol</span>
-<h2 class="h-lg" style="margin:20px 0 26px">Gehörschutz auf <em>höchstem</em> Niveau</h2>
+    {split(f"""<h2 class="h-lg" style="margin:20px 0 26px">Gehörschutz auf <em>höchstem</em> Niveau</h2>
 <div class="prose"><p>Wir bieten maßgeschneiderten Gehörschutz für jede Anforderung – made in Tirol. Vom einfachen Gehörschutz bis hin zu speziellen Bedürfnissen wie Jägergehörschutz oder In-Ear-Monitoring für Musiker. Dank unseres eigenen Akustiklabors garantieren wir präzise Anpassung und höchste Qualität. Egal, ob Sie Ihre Ohren vor Maschinenlärm, Schussknall oder lauten Bühnensounds schützen möchten – wir entwickeln Lösungen, die Komfort und Schutz perfekt kombinieren.</p></div>
 <p class="kicker" style="margin:30px 0 14px">Wir beraten Sie zu:</p><div class="chips">{chips}</div>""",
            f'<div class="frame frame--square">{img("FS9RypWc", "Maßgefertigter Gehörschutz")}</div>')}
@@ -325,7 +320,7 @@ def gehoerschutz():
 <section class="section section--line">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Langzeitschutz</span><h2 class="h-lg">Mit hochwertigem Gehörschutz <em>rundum sicher</em></h2></div>
+      <div class="rv"><h2 class="h-lg">Mit hochwertigem Gehörschutz <em>rundum sicher</em></h2></div>
       <p class="lead rv" style="--d:.1s">Wird das Gehör immer wieder einer starken Lärmbelastung ausgesetzt, so kann es zu Langzeitschäden kommen. Disco, laute Konzerte, aber auch ein lautes Arbeitsumfeld können auf lange Sicht zu einer Hörminderung führen, wenn Sie Ihre Ohren nicht adäquat schützen. Lassen Sie sich von uns zum Thema Hörschutz beraten – wir sind gerne für Sie da.</p>
     </div>
     <div class="rv">{gallery("gs", prod_gal)}</div>
@@ -334,7 +329,7 @@ def gehoerschutz():
 <section class="section section--line" aria-labelledby="labor">
   <div class="container">
     <div class="sec-head">
-      <div class="rv"><span class="eyebrow">Eigenes Akustiklabor</span><h2 class="h-lg" id="labor"><em>Labor</em></h2></div>
+      <div class="rv"><h2 class="h-lg" id="labor"><em>Labor</em></h2></div>
       <p class="lead rv" style="--d:.1s">In unserem hauseigenen Labor fertigen wir individuellen Gehörschutz nach höchsten Qualitätsstandards – exakt abgestimmt auf Ihre Bedürfnisse. Jedes Produkt wird von Hand hergestellt und präzise geprüft, bevor es unser Haus verlässt. So stellen wir sicher, dass Sie zuverlässigen Schutz und maximalen Tragekomfort erhalten – ganz gleich, in welcher Situation Sie Ihr Gehör schonen oder unterstützen möchten.</p>
     </div>
     <div class="rv">{gallery("lab", lab_gal, "rail")}</div>
@@ -343,14 +338,12 @@ def gehoerschutz():
 <section class="section section--line">
   <div class="container">
     <div style="margin-bottom:clamp(60px,8vw,110px)">
-    {split(f"""<span class="eyebrow">Schlafschutz</span>
-<h2 class="h-lg" style="margin:20px 0 26px"><em>Schlafschutz</em></h2>
+    {split(f"""<h2 class="h-lg" style="margin:20px 0 26px"><em>Schlafschutz</em></h2>
 <div class="prose"><p>Erholsamer Schlaf ist essenziell für Gesundheit und Wohlbefinden. Ein maßgefertigter Schlafschutz sorgt für ungestörte Ruhe, indem er störende Geräusche wie Schnarchen, Verkehr oder Umgebungslärm effektiv dämpft – wichtige Signale wie Wecker, Telefon, Rauchmelder oder das Schreien eines Kindes bleiben dabei weiterhin wahrnehmbar.</p>
 <p>Ob zu Hause, im Urlaub, in Berghütten oder beim Camping: Der individuell angepasste Gehörschutz passt sich jeder Schlafumgebung an und kann auch die Konzentration fördern. Gefertigt aus besonders weichem Silikon bietet er hohen Tragekomfort, auch für Seitenschläfer. Dank präziser Anpassung sitzt er sicher und druckfrei – so leicht, dass man ihn kaum spürt.</p></div>""",
            f'<div class="frame frame--wide">{img("etu7QxAk", "Schlafschutz")}</div>')}
     </div>
-    {split(f"""<span class="eyebrow">Schwimmschutz</span>
-<h2 class="h-lg" style="margin:20px 0 26px"><em>Schwimmschutz</em></h2>
+    {split(f"""<h2 class="h-lg" style="margin:20px 0 26px"><em>Schwimmschutz</em></h2>
 <div class="prose"><p>Ein maßgefertigter Spritzwasserschutz sorgt für unbeschwerten Wasserspaß – im Schwimmbad, am Meer oder beim Duschen. Gefertigt aus hochwertigem, schwimmfähigem Silikon hält er Wasser zuverlässig vom Gehörgang fern und schützt zusätzlich vor Bakterien und Infektionen. Besonders geeignet ist er für empfindliche Ohren oder zur Vorbeugung von Entzündungen, auch bei Kindern.</p>
 <p>Die individuelle Anpassung gewährleistet einen sicheren Sitz ohne Verrutschen, während das weiche, hautfreundliche Material hohen Tragekomfort bietet. Ein praktischer Griff erleichtert das Einsetzen und Herausnehmen, optional sind Halteband und verschiedene Farben erhältlich.</p>
 <p>Für aktive Wassersportler gibt es zudem Varianten mit Spezialfilter, die Wasser abhalten und gleichzeitig Sprache sowie Umgebungsgeräusche gut hörbar lassen – für mehr Sicherheit beim Training und Wettkampf. <strong>Nicht geeignet für Sporttauchen.</strong></p></div>""",

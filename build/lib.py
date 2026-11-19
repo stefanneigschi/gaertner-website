@@ -378,7 +378,6 @@ def page_hero(eyebrow, h1, lead_html, image=None, alt="", crumbs=None, buttons=N
   <div class="container">
     <div class="phero__inner">
       <div class="rv">{c}</div>
-      <div class="rv" style="--d:.05s;margin-top:22px"><span class="eyebrow">{escape(eyebrow)}</span></div>
       <h1 class="h-xl rv" style="--d:.12s">{h1}</h1>
       <div class="lead rv" style="--d:.2s">{lead_html}</div>
       {b}
@@ -425,7 +424,7 @@ def locations_html(heading=True):
     if heading:
         head = f'''
   <div class="sec-head">
-    <div class="rv"><span class="eyebrow">Standorte</span><h2 class="h-lg">Vier Adressen.<br><em>Ein Team</em> in Innsbruck.</h2></div>
+    <div class="rv"><h2 class="h-lg">Vier Adressen.<br><em>Ein Team</em> in Innsbruck.</h2></div>
     <p class="lead rv" style="--d:.1s">Sie erreichen uns in nur 7 Gehminuten vom Hauptbahnhof. Parken können Sie bequem in der „Casino-Garage“, die nur ca. 3 Gehminuten entfernt ist.</p>
   </div>'''
     return f'''
@@ -442,7 +441,6 @@ def cta(title_html, text, buttons, bg="U678tAZy"):
   <div class="container">
     <div class="cta rv">
       <div class="cta__bg" aria-hidden="true">{img(bg, '')}</div>
-      <span class="eyebrow">Persönliche Beratung</span>
       <h2 class="h-lg">{title_html}</h2>
       <p class="lead">{text}</p>
       <div class="btn-row">{"".join(buttons)}</div>
