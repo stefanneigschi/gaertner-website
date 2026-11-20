@@ -1,0 +1,37 @@
+import glob
+R='/home/user/gaertner-website/social'
+covers=sorted(glob.glob(R+'/posts/*_1.png'))
+cells=''.join(f'<div class="c"><img src="file://{c}"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="14" height="14" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M4 7v12a2 2 0 0 0 2 2h12" fill="none" stroke="#fff" stroke-width="2"/></svg></div>' for c in covers)
+html=f'''<!doctype html><html lang="de-AT"><head><meta charset="utf-8"><style>
+@font-face{{font-family:"Manrope";src:url("file:///home/user/gaertner-website/dist/assets/fonts/manrope-latin-wght-normal.woff2");font-weight:200 800}}
+*{{box-sizing:border-box;margin:0;padding:0}}
+body{{width:1200px;height:1400px;background:#d9ddd6;font-family:Manrope,sans-serif;display:grid;place-items:center;position:relative}}
+.phone{{width:560px;height:1092px;border-radius:64px;background:#111;padding:14px;box-shadow:0 40px 90px -30px rgba(0,0,0,.45)}}
+.screen{{width:100%;height:100%;border-radius:52px;background:#fff;overflow:hidden;color:#111;display:flex;flex-direction:column}}
+.status{{height:46px;display:flex;justify-content:space-between;align-items:center;padding:0 34px;font-size:15px;font-weight:700}}
+.bar{{display:flex;justify-content:space-between;align-items:center;padding:6px 20px 10px;font-weight:700;font-size:19px}}
+.prof{{display:flex;align-items:center;gap:22px;padding:6px 20px}}
+.av{{width:86px;height:86px;border-radius:50%;background:#080a09;display:grid;place-items:center;flex-shrink:0;outline:2px solid #e5e5e5;outline-offset:3px}}
+.av img{{width:62px}}
+.stats{{display:flex;gap:26px;font-size:14px;text-align:center}}.stats b{{display:block;font-size:17px}}
+.bio{{padding:10px 20px 12px;font-size:14px;line-height:1.4}}.bio a{{color:#00376b}}
+.btns{{display:flex;gap:6px;padding:0 20px 14px}}.btns span{{flex:1;background:#efefef;border-radius:8px;text-align:center;padding:7px;font-size:13.5px;font-weight:600}}
+.tabs{{display:flex;border-top:1px solid #e5e5e5}}.tabs span{{flex:1;text-align:center;padding:10px;font-size:13px;color:#999}}.tabs span:first-child{{color:#111;border-bottom:1.5px solid #111}}
+.feed{{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}}
+.c{{position:relative}}.c img{{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}}
+.c svg{{position:absolute;top:8px;right:8px;width:18px;height:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.6))}}
+.cap{{position:absolute;bottom:60px;font-size:15px;color:#555}}
+</style></head><body>
+<div class="phone"><div class="screen">
+<div class="status"><span>9:41</span><span>●●● ▮</span></div>
+<div class="bar"><span>gaertner.innsbruck</span><span>☰</span></div>
+<div class="prof"><div class="av"><img src="file:///home/user/gaertner-website/dist/assets/img/logowhitesmall.webp"></div>
+<div class="stats"><div><b>9</b>Beiträge</div><div><b>–</b>Follower</div><div><b>–</b>Gefolgt</div></div></div>
+<div class="bio"><b>Gaertner – Optik &amp; Hörakustik</b><br>Optiker und Hörakustiker in Innsbruck<br>Familienbetrieb seit mehr als 45 Jahren · Meisterbetrieb mit eigenem Labor<br><a>gaertner-innsbruck.at</a></div>
+<div class="btns"><span>Folgen</span><span>Nachricht</span><span>Kontakt</span></div>
+<div class="tabs"><span>▦ Beiträge</span><span>▷ Reels</span><span>◎ Markiert</span></div>
+<div class="feed">{cells}</div>
+</div></div>
+<div class="cap">Mockup – Feed mit 9 Karussell-Posts (Handle und Profilangaben als Platzhalter)</div>
+</body></html>'''
+open(R+'/html/feed.html','w').write(html)
